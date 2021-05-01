@@ -4,9 +4,9 @@ Architecture of your app
 
 the architecture is a MVVM which all the baseClasses were created by me (except the BaseAdapter and BaseItemViewModel which i need to improve).
 
-All the baseClasses are in the module base : 
+All the baseClasses are in the module base.
 
-it follow theses rules :
+The architecture follows theses rules :
 
 - Domain is independant of Data an Ui.
  - Ui and Data should never know each others.
@@ -15,7 +15,7 @@ it follow theses rules :
  - If an User's action change the model -> ViewModel will change the model then disptach an action if necessary
  - If an User's action doesn't change the model -> the view will handle by itself the action
  - All the uiModel should be in databinding, observed by the view -> Screen orientations is handle in every cases (except for the dialog, i need to dig into that)
-- To do so, i use a sharedViewModel in my feature to not have to passe data betweens fragments.
+ - SharedViewModel for one feature to not have to passe data betweens fragments.
 
 Choice of libraries
 
