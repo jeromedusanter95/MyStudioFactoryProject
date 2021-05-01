@@ -4,6 +4,8 @@ Architecture of your app
 
 the architecture is a MVVM which all the baseClasses were created by me (except the BaseAdapter and BaseItemViewModel which i need to improve).
 
+All the baseClasses are in the module base : 
+
 it follow theses rules :
 
 - Domain is independant of Data an Ui.
