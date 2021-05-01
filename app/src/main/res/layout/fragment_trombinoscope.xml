@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.jeromedusanter.mystudiofactorytest.ui.trombinoscope.TrombinoscopeViewModel" />
+    </data>
+
+    <com.jeromedusanter.mystudiofactorytest.ui.trombinoscope.TrombinoscopeStatefulLayout
+        android:id="@+id/statefulLayout_trombinoscope"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:uiState="@{viewModel.trombinoscopeUiState.value}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/unit_2">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_developer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:list="@{viewModel.trombinoscopeUiModel.list}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.jeromedusanter.mystudiofactorytest.ui.trombinoscope.TrombinoscopeStatefulLayout>
+</layout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_dev">
+
+    <navigation
+        android:id="@+id/navigation_dev"
+        app:startDestination="@id/fragment_trombinoscope">
+
+        <fragment
+            android:id="@+id/fragment_trombinoscope"
+            android:name="com.jeromedusanter.mystudiofactorytest.ui.trombinoscope.TrombinoscopeFragment"
+            tools:layout="@layout/fragment_trombinoscope">
+
+            <action
+                android:id="@+id/action_navigate_to_dev_details"
+                app:destination="@id/fragment_dev_details" />
+
+        </fragment>
+        <fragment
+            android:id="@+id/fragment_dev_details"
+            android:name="com.jeromedusanter.mystudiofactorytest.ui.trombinoscope.details.DeveloperDetailsFragment"
+            tools:layout="@layout/fragment_trombinoscope" />
+    </navigation>
+
+</navigation>

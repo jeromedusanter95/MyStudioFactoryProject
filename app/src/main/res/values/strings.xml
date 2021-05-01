@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyStudioFactory Test</string>
+    <string name="trombinoscope_error_title">Une erreur est survenue…</string>
+    <string name="trombinoscope_error_subtitle">Assurez vous d\'avoir une connexion internet et veuillez réessayer.</string>
+    <string name="trombinoscope_error_button_text">Réessayer</string>
+    <string name="trombinoscope_empty_title">Aucun collaborateur trouvé</string>
+    <string name="trombinoscope_empty_subtitle">Votre recherche n\'a trouvée aucun résultat. Veuillez réessayer.</string>
+    <string name="trombinoscope_loading_title">Chargement des collaborateurs</string>
+    <string name="trombinoscope_loading_subtitle">en cours…</string>
+    <string name="developer_detail_title">Détails du développeur</string>
+    <string name="developer_detail_hired">Embauché</string>
+    <string name="developer_detail_not_hired">Pas embauché</string>
+    <string name="developer_detail_unknown">Inconnu</string>
+</resources>

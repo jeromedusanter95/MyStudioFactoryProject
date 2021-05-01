@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.jeromedusanter.mystudiofactorytest.ui.trombinoscope.DeveloperItemViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/unit_2"
+        android:elevation="@dimen/unit_1"
+        app:cardCornerRadius="@dimen/unit_1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/unit_2">
+
+            <TextView
+                android:id="@+id/text_name"
+                style="@style/AppTheme.Text.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.name}"
+                app:layout_constraintBottom_toTopOf="@id/text_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text='Jérôme Dusanter' />
+
+            <TextView
+                android:id="@+id/text_description"
+                style="@style/AppTheme.Text.Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.description}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_name"
+                tools:text='Développeur Android' />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.jeromedusanter.mystudiofactorytest.ui.trombinoscope.TrombinoscopeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/unit_2"
+        tools:context=".app.developerdetail.DeveloperDetailsActivity">
+
+        <ImageView
+            android:id="@+id/img_picture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/unit_2"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:url="@{viewModel.detailsUiModel.developerUiModel.picture}" />
+
+        <TextView
+            android:id="@+id/text_Name"
+            style="@style/AppTheme.Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/unit_2"
+            android:layout_marginTop="@dimen/unit_1"
+            android:text="@{viewModel.detailsUiModel.developerUiModel.name}"
+            app:layout_constraintStart_toEndOf="@id/img_picture"
+            app:layout_constraintTop_toTopOf="@id/img_picture"
+            tools:text="Jérôme Dusanter" />
+
+
+        <TextView
+            android:id="@+id/text_description"
+            style="@style/AppTheme.Text.Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/unit_2"
+            android:layout_marginTop="@dimen/unit_1"
+            android:text="@{viewModel.detailsUiModel.developerUiModel.description}"
+            app:layout_constraintStart_toEndOf="@id/img_picture"
+            app:layout_constraintTop_toBottomOf="@id/text_Name"
+            tools:text="Développeur Android" />
+
+        <TextView
+            android:id="@+id/text_hired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/unit_2"
+            android:layout_marginTop="@dimen/unit_1"
+            app:layout_constraintStart_toEndOf="@id/img_picture"
+            app:layout_constraintTop_toBottomOf="@id/text_description"
+            app:textRes="@{viewModel.detailsUiModel.developerUiModel.status}"
+            tools:text="Hired" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
